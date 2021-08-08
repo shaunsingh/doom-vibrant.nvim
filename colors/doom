@@ -1,0 +1,9 @@
+lua << EOF
+package.loaded['doom'] = nil
+package.loaded['doom.util'] = nil
+package.loaded['doom.colors'] = nil
+package.loaded['doom.theme'] = nil
+package.loaded['doom.functions'] = nil
+
+require('doom').set()
+EOF
