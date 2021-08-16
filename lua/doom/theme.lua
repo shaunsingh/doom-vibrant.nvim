@@ -398,8 +398,8 @@ theme.loadPlugins = function()
     IndentBlanklineContextChar = { fg = doom.doom3_gui },
 
     -- Illuminate
-    illuminatedWord =    { bg = doom.cursorlinefg },
-    illuminatedCurWord = { bg = doom.cursorlinefg },
+    illuminatedWord =    { bg = doom.doom3_gui },
+    illuminatedCurWord = { bg = doom.doom3_gui },
 
     -- nvim-dap
     DapBreakpoint = { fg = doom.doom14_gui},
