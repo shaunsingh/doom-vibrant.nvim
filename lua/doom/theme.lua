@@ -51,7 +51,7 @@ theme.loadSyntax = function ()
   }
 
   	-- Italic comments
-	if vim.g.doom_italic == false then
+	if vim.g.doom_italic == true then
 		syntax.Conditional =		{ fg = doom.doom9_gui, bg = doom.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
 		syntax.Keyword =			{ fg = doom.doom9_gui, bg = doom.none, style = 'italic' } -- italic for, do, while, etc.
 		syntax.Repeat =				{ fg = doom.doom9_gui, bg = doom.none, style = 'italic' } -- italic any other keyword
@@ -278,9 +278,9 @@ theme.loadLSP = function ()
     LspDiagnosticsFloatingHint =           { fg = doom.doom9_gui  }, -- used for "Hint" diagnostic messages in the diagnostics float
     LspDiagnosticsVirtualTextHint =        { fg = doom.doom9_gui  }, -- Virtual text "Hint"
     LspDiagnosticsUnderlineHint =          { style = 'undercurl', sp = doom.doom10_gui }, -- used to underline "Hint" diagnostics.
-    LspReferenceText =                     { fg = doom.doom4_gui, bg = doom.doom4_gui }, -- used for highlighting "text" references
-    LspReferenceRead =                     { fg = doom.doom4_gui, bg = doom.doom4_gui }, -- used for highlighting "read" references
-    LspReferenceWrite =                    { fg = doom.doom4_gui, bg = doom.doom4_gui }, -- used for highlighting "write" references
+    LspReferenceText =                     { fg = doom.doom4_gui, bg = doom.doom1_gui }, -- used for highlighting "text" references
+    LspReferenceRead =                     { fg = doom.doom4_gui, bg = doom.doom1_gui }, -- used for highlighting "read" references
+    LspReferenceWrite =                    { fg = doom.doom4_gui, bg = doom.doom1_gui }, -- used for highlighting "write" references
   }
 
   return lsp
@@ -310,13 +310,14 @@ theme.loadPlugins = function()
     -- Neogit
     NeogitBranch =               { fg = doom.doom10_gui },
     NeogitRemote =               { fg = doom.doom9_gui },
-    NeogitHunkHeader =           { fg = doom.doom4_gui, bg = doom.doom4_gui },
-    NeogitHunkHeaderHighlight =  { fg = doom.doom7_gui, bg = doom.doom2_gui },
-    NeogitDiffContextHighlight = { fg = doom.doom1_gui, bg = doom.doom2_gui },
-    NeogitDiffDeleteHighlight =  { fg = doom.doom11_gui },
-    NeogitDiffAddHighlight =     { fg = doom.doom14_gui },
 
-    -- GitGutter
+    NeogitHunkHeader =           { fg = doom.doom8_gui },
+    NeogitHunkHeaderHighlight =  { fg = doom.doom8_gui, bg = doom.doom1_gui },
+    NeogitDiffContextHighlight = { bg = doom.doom1_gui },
+    NeogitDiffDeleteHighlight =  { fg = doom.doom11_gui, style='reverse' },
+    NeogitDiffAddHighlight =     { fg = doom.doom14_gui, style='reverse' },
+
+        -- GitGutter
     GitGutterAdd =    { fg = doom.doom14_gui }, -- diff mode: Added line |diff.txt|
     GitGutterChange = { fg = doom.doom15_gui }, -- diff mode: Changed line |diff.txt|
     GitGutterDelete = { fg = doom.doom11_gui }, -- diff mode: Deleted line |diff.txt|
